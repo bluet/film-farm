@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Video from "../components/Video";
-import request from "../api";
+import videoAPI, { getVideosRequest } from "../api";
 
 export default function Home({ videos, nextPageToken}) {
-  // console.log(videos, nextPageToken);
   return (
     <main className="min-h-screen bg-bunker-500">
       <Head>
@@ -24,17 +23,7 @@ export default function Home({ videos, nextPageToken}) {
 }
 
 export async function getServerSideProps(context) {
-  const { data } = await request("/videos", {
-    params: {
-      part: "snippet,contentDetails,statistics",
-      chart: "mostPopular",
-      regionCode: "US",
-      maxResults: 40,
-      pageToken: "",
-    },
-  });
-
-  // console.log(data);
+  const data = await getVideosRequest();
 
   return {
     props: {
