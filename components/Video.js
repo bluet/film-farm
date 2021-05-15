@@ -6,7 +6,7 @@ function Video({ video }) {
   const { id, snippet } = video;
   // console.log(video);
   return (
-    <div className="mb-3 h-52 ">
+    <div className="mb-3 h-52">
       <Link href="/watch/[id]" as={`/watch/${id}`}>
         <div className="flex flex-col items-center px-8 py-4 bg-black cursor-pointer">
           <Image src={snippet.thumbnails.high.url} width="auto" height="auto" />
