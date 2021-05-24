@@ -15,21 +15,21 @@ export default function Home({ videos, nextPageToken }) {
       </Head>
       <div className="flex flex-wrap justify-center">
         <Floating />
-        <main className="grid grid-cols-12 gap-3 px-3 bg-bunker-500 max-w-[980px]">
-          <div className="col-span-12">
-            <Banner />
-            <Banner />
-            <Banner />
-          </div>
-          {videos.map((video) => (
-            <div
-              className="col-span-6 sm:col-span-4 lg:col-span-3"
-              key={video.id}
-            >
-              <Video video={video} />
-            </div>
-          ))}
-        </main>
+        <div className="max-w-screen-lg ">
+          <Banner width="980px" height="90px" />
+          <Banner width="980px" height="90px" />
+          <Banner width="980px" height="90px" />
+          <main className="grid max-w-screen-lg grid-cols-12 gap-3 p-3 bg-bunker-500">
+            {videos.map((video) => (
+              <div
+                className="col-span-6 sm:col-span-4 lg:col-span-3"
+                key={video.id}
+              >
+                <Video video={video} />
+              </div>
+            ))}
+          </main>
+        </div>
         <Floating />
       </div>
     </div>
