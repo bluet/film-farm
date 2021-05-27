@@ -1,0 +1,4 @@
+{
+  // replace typescript definitions with node_modules definitions
+  "typeAcquisition": { "enable": false }
+}
