@@ -1,4 +1,10 @@
 {
-  // replace typescript definitions with node_modules definitions
-  "typeAcquisition": { "enable": false }
+  "compilerOptions": {
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "baseUrl": "."
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", ".next"]
 }
