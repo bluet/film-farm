@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
 
-function Banner({ width, height, ...rest }) {
+function Banner({ className }) {
   return (
     <div
-      className="flex items-center justify-center mb-1 overflow-hidden text-4xl bg-yellow-300 cursor-pointer"
-      style={{ ...rest, maxWidth: width, height }}
+      className={`overflow-hidden text-3xl text-center bg-yellow-300 cursor-pointer ${className}`}
     >
-      Banner Ads - {parseInt(width, 10)}x{parseInt(height, 10)}
+      Banner Ads
     </div>
   );
 }
 
 Banner.propTypes = {
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default Banner;
