@@ -4,7 +4,7 @@ import { Banner, Floating, Catfish, AdsContainer } from "../components/Ads";
 
 export default function Home({ videos, nextPageToken }) {
   return (
-    <div className="min-h-screen">
+    <>
       <div className="flex flex-wrap justify-center">
         <Floating />
         <div className="max-w-screen-lg">
@@ -27,11 +27,11 @@ export default function Home({ videos, nextPageToken }) {
       <AdsContainer className="sticky bottom-0 mx-auto max-w-[1280px]">
         <Catfish className="h-[50px] sm:h-[90px]" />
       </AdsContainer>
-    </div>
+    </>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   const data = await getVideosRequest();
 
   return {
