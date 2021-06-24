@@ -1,6 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Preview
+
+<https://film-farm.vercel.app/>
+
 ## Getting Started
+
+將測試用的 Youtube API 放置 `.env.local`
+
+`.env.local` 內容格式：
+
+```plain
+YT_API_KEY=sdkflawoe4itjzxdfsldkfgjiopkm123456789
+```
+
+---
 
 First, run the development server:
 
