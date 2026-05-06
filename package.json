@@ -9,7 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^0.31.1",
     "next": "^12.1.0",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
